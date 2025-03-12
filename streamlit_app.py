@@ -2,8 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+from keras.models import load_model
+model = load_model('cnn_model.h5')
+
+
 # Load the saved model
-model = joblib.load('cnn_model.pkl')
+# model = joblib.load('cnn_model.pkl')
 
 # Streamlit UI
 st.set_page_config(page_title='ML Model Deployment', layout='wide')
